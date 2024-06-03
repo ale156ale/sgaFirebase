@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+   <!-- basic -->
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <!-- mobile metas -->
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+   <!-- site metas -->
+   <title>Gestão de Alunos- FATEC</title>
+   <meta name="keywords" content="">
+   <meta name="description" content="">
+   <meta name="author" content="Alexandre Antônio Barelli">
+   <!-- site icon -->
+   <link rel="icon" href="images/logo/favicon.png" type="image/png" />
+   <!-- bootstrap css -->
+   <link rel="stylesheet" href="css/bootstrap.min.css" />
+   <!-- site css -->
+   <link rel="stylesheet" href="style.css" />
+   <!-- responsive css -->
+   <link rel="stylesheet" href="css/responsive.css" />
+   <!-- color css -->
+   <link rel="stylesheet" href="css/colors.css" />
+   <!-- select bootstrap -->
+   <link rel="stylesheet" href="css/bootstrap-select.css" />
+
+   <!-- custom css -->
+   <link rel="stylesheet" href="css/custom.css" />
+
+</head>
+
+<body class="inner_page login">
+   <div class="full_container">
+      <div class="container">
+         <div class="center verticle_center full_height">
+            <div class="login_section">
+               <div class="logo_login">
+                  <div class="center">
+                     <img width="210" src="images/logo/logo.png" alt="#" />
+                  </div>
+               </div>
+               <div class="login_form">
+                  <div id="mensagemAlerta"></div>
+                  <form id="formLogin">
+                     <fieldset>
+                        <div class="field">
+                           <label class="label_field">E-mail</label>
+                           <input type="email" class="form-control" placeholder="E-mail do usuário" id="email" required
+                              autofocus>
+                        </div>
+                        <div class="field">
+                           <label class="label_field">Senha</label>
+                           <input type="password" class="form-control" placeholder="Senha do usuário" id="senha"
+                              required>
+                        </div>
+                        <div class="field">
+                           <label class="label_field hidden">hidden label</label>
+                           <label class="form-check-label"></label>
+                           <a class="forgot" href="cadastrar.html">Ainda não tem uma conta?</a>
+                        </div>
+                        <div class="field">
+                           <label class="label_field hidden">hidden label</label>
+                           <label class="form-check-label"></label>
+                           <a class="forgot" href="#" data-toggle="modal"
+                           data-target="#bd-esqueceu-modal">Esqueceu a senha?</a>
+                        </div>
+                        <div class="field margin_0">
+                           <label class="label_field hidden">hidden label</label>
+                           <button class="main_bt" type="submit" title="Efetue o Login com o seu usuário e senha">
+                              <i class="fa fa-lock"></i> Login </button>
+                        </div>
+                     </fieldset>
+                  </form>
+               </div>
+            </div>
+         </div>
+         <!-- Modal Redefinir Senha -->
+         <div class="modal fade" id="bd-esqueceu-modal" tabindex="-1" role="dialog"
+            aria-labelledby="bd-esqueceu-modal" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+               <div class="modal-content">
+                  <div class="modal-header">
+                     <h5 class="modal-title" id="bd-esqueceu-modal">Esqueceu a Senha? Digite seu e-mail</h5>
+                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                     </button>
+                  </div>
+                  <div class="modal-body">
+                     <form id="formRedefinirSenha">
+                        <div class="form-group">
+                           <label for="email">Email</label>
+                           <input type="email" class="form-control" id="user-email_senha_esqueceu">
+                        </div>
+                     </form>
+                  </div>
+                  <div class="modal-footer">
+                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                     <button type="button" class="btn btn-primary" onclick="enviarEmailRedefinicaoEsqueceu()">Enviar
+                        Email de Redefinição</button>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- Fim Modal Redefinir Senha -->
+      </div>
+   </div>
+
+   <!-- jQuery -->
+   <script src="js/jquery.min.js"></script>
+   <script src="js/bootstrap.min.js"></script>
+
+   <!-- custom js -->
+   <script src="js/custom.js"></script>
+
+   <!-- Carregando os scripts do Firebase -->
+   <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app-compat.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-database-compat.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-auth-compat.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-storage-compat.js"></script>
+   <!-- Carregamento dos scripts do projeto-->
+   <script src="js/firebase/firebase.js"></script>
+   <script src="js/firebase/authentication.js"></script>
+   <script src="js/util/alerta.js"></script>
+   <script src="js/views/login.js"></script>
+</body>
+
+</html>

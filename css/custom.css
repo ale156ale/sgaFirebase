@@ -1,0 +1,28 @@
+/*------------------------------------------------------------------
+    File Name: custom.css
+-------------------------------------------------------------------*/
+
+/** ADD YOUR AWESOME CODES HERE **/
+
+.fundo-escuro {
+    background-color: #000000;
+    color: white;
+}
+
+/* Estilos gerais para botões quando selecionados */
+.btn-check:checked + .btn {
+    background-color: #007bff;
+    color: white;
+  }
+
+  /* Estilos específicos para o botão Masculino */
+  #sexoM:checked + .btn-outline-info {
+    background-color: #17a2b8;
+    color: white;
+  }
+
+  /* Estilos específicos para o botão Feminino */
+  #sexoF:checked + .btn-outline-danger {
+    background-color: #dc3545;
+    color: white;
+  }
